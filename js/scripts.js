@@ -38,7 +38,7 @@ map.addLayer({
 'type': 'fill',
 'paint': {
   'fill-color': '#d73027',
-  'fill-opacity': 0.5,
+  'fill-opacity': 0.2,
   }
 });
 
@@ -133,11 +133,10 @@ map.addLayer({
 'source': 'smia',
 'type': 'fill',
 'paint': {
-  'fill-color': '#636363',
-  'fill-opacity': 0.2,
+  'fill-color': '#4d004b',
+  'fill-opacity': 0.9,
   }
 });
-
 
 });
 
