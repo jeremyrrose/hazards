@@ -141,6 +141,8 @@ map.on('style.load', function() {
 });
 var chapters = {
 'intro': {
+  center: [-74.007091, 40.746972],
+  zoom: 10,
 },
 
 'rockaways': {
