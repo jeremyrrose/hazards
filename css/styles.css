@@ -9,6 +9,7 @@ height: 100%;
 position: absolute;
 top: 0;
 left: 0;
+z-index: 100;
 }
 
 #sidebar {
@@ -19,9 +20,9 @@ left: 0;
   top:0;
   left:0;
   box-sizing: border-box;
-  overflow:auto;
-  z-index: 100;
-
+  overflow-x:auto;
+  overflow-y:auto;
+  z-index:200;
 }
 
 #features {
@@ -35,6 +36,7 @@ left: 0;
   text-shadow: 2px 1px #303030;
   font-size:1.2vw;
   line-height:2.1vw;
+  z-index: 500;
 }
 
 

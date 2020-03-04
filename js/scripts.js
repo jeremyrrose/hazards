@@ -19,9 +19,6 @@ var initOptions = {
 // create the new map
 var map = new mapboxgl.Map(initOptions);
 
-// add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.NavigationControl());
-
 // wait for the initial style to Load
 map.on('style.load', function() {
 
@@ -133,6 +130,7 @@ map.on('style.load', function() {
         'id': 'smia',
         'source': 'smia',
         'type': 'fill',
+        'layout': {'visibility': 'none'},
         'paint': {
           'fill-color': '#4d004b',
           'fill-opacity': 0.9,
@@ -151,7 +149,11 @@ bearing: 150,
 zoom: 15,
 pitch: 0,
 },
+
 };
+
+
+
 
 // On every scroll event, check which element is on screen
 window.onscroll = function() {
