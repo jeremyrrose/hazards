@@ -1,49 +1,61 @@
-/* get rid of the browser's default margin and padding around the body */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* absolute position the map container as full screen, leaving 300 pixels on the left */
 #map {
-  width: 100%;
+width: 100%;
 height: 100%;
 position: absolute;
 top: 0;
 left: 0;
 }
 
-/* sidebar is fixed with and positioned to the left */
 #sidebar {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 35%;
-  background:rgba(0,0,0,0.5);
-  color: #FFF;
-  padding: 25px;
+  background:rgba(82,82,82,0.3);
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
   box-sizing: border-box;
-  overflow:hidden;
-  z-index: 9;
+  overflow:auto;
+  z-index: 100;
+
 }
 
 #features {
-  background:rgba(0,0,0,0.5);
+  background:rgba(0,0,0,0.7);
+  position:absolute;
   color: #FFF;
-  width: 100%;
-  height: 100%;
+  width: 40%;
+  top: 30px;
+  left:20px;
   box-sizing: border-box;
-  overflow: scroll;
-  z-index: 11;
+  text-shadow: 2px 1px #303030;
+  font-size:1.2vw;
+  line-height:2.1vw;
 }
 
+
+
+h1 {
+  font-size:4.3vw;
+  line-height:4.3vw;
+}
+
+
+h2 {
+  font-size:2.4vw;
+  line-height:2.4vw;
+}
+
+img {max-width: 75%;}
+
 section {
-padding: 25px 50px;
-line-height: 25px;
+padding: 10px 20px;
 border-bottom: 1px solid #ddd;
 opacity: 0.25;
-font-size: 13px;
 }
 section.active {
 opacity: 1;
