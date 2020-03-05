@@ -5,7 +5,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiY25laWRzb24iLCJhIjoiY2s3Ynp3NTFhMDBhaTNncXVwN
 
 // we want to return to this point and zoom level after the user interacts
 // with the map, so store them in variables
-var initialCenterPoint = [-74.007091, 40.746972]
+var initialCenterPoint = [-74.052005, 40.722214]
 var initialZoom = 10
 
 // create an object to hold the initialization options for a mapboxGL map
@@ -132,14 +132,23 @@ map.on('style.load', function() {
         'type': 'fill',
         'layout': {'visibility': 'none'},
         'paint': {
-          'fill-color': '#4d004b',
-          'fill-opacity': 0.9,
+          'fill-color': '#E066FF',
+          'fill-opacity': 0.5,
+          'fill-outline-color': 'black'
           }
         });
 });
+
+map.addControl(
+new MapboxGeocoder({
+accessToken: mapboxgl.accessToken,
+mapboxgl: mapboxgl
+})
+);
+
 var chapters = {
 'intro': {
-  center: [-74.007091, 40.746972],
+  center: [-74.052005, 40.722214],
   zoom: 10,
 },
 
