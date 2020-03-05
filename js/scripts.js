@@ -150,25 +150,27 @@ var chapters = {
 'intro': {
   center: [-74.052005, 40.722214],
   zoom: 10,
+  essential: true
 },
 
 'rockaways': {
-center: [-73.816615, 40.585236],
-bearing: 150,
-zoom: 15,
-pitch: 0,
+  center: [-73.816615, 40.585236],
+  zoom: 11,
+  essential: true
 },
 
 };
 
 
 
-
+console.log('hello')
 // On every scroll event, check which element is on screen
 window.onscroll = function() {
+  console.log('scroll')
 var chapterNames = Object.keys(chapters);
 for (var i = 0; i < chapterNames.length; i++) {
 var chapterName = chapterNames[i];
+console.log(chapterName)
 if (isElementOnScreen(chapterName)) {
 setActiveChapter(chapterName);
 break;
@@ -180,6 +182,7 @@ var activeChapterName = 'intro';
 function setActiveChapter(chapterName) {
 if (chapterName === activeChapterName) return;
 
+console.log('flying to ', chapters[chapterName])
 map.flyTo(chapters[chapterName]);
 
 document.getElementById(chapterName).setAttribute('class', 'active');
