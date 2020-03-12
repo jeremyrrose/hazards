@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <meta charset='utf-8' />
-      <title>Storm Risk and Environmental Hazards in NYC</title>
-      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
-      <link href='css/styles.css' rel='stylesheet' />
-  </head>
-  <body>
-		<div id="map"></div>
-	<div id="sidebar">
-	<div id="features">
-	<section id="intro" class="active">
-      <h1>Storm Risk and Environmental Hazards in NYC</h1>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Storm Risk and Environmental Hazards in NYC</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
+  <link href='css/styles.css' rel='stylesheet' />
+</head>
+
+<body>
+  <div id="map"></div>
+  <div id="container">
+    <div id="features">
+      <section id="intro" class="active">
+        <h1>Storm Risk and Environmental Hazards in NYC</h1>
         <p>
-        New York City is vulnerable to coastal storms, including nor'easters, tropical storms and hurricanes. As part of the city's diaster managment planning, designated hurricane evacuation zones have been established to identify areas likely to be inundated by storm surge.
-</p>
-      Residents living in evacuation zones face risks not only from coastal storms themselves, but also from long-term environmental and public health hazards associated with flooding in these areas. Much of this is linked to the long history of manufacturing and industrial enterprises in New York. These risks will be explored in this map.
+          New York City is vulnerable to coastal storms, including nor'easters, tropical storms and hurricanes. As part of the city's diaster managment planning, designated hurricane evacuation zones have been established to identify areas likely to
+          be inundated by storm surge.
+        </p>
+        Residents living in evacuation zones face risks not only from coastal storms themselves, but also from long-term environmental and public health hazards associated with flooding in these areas. Much of this is linked to the long history of
+        manufacturing and industrial enterprises in New York. These risks will be explored in this map.
         </p>
       </section>
-    <section id="rockaways">
-      <h2>Storm flooding in NYC</h2>
-      <p><img src="./images/01.jpg"></p>
-      <p><img src="./images/02.jpg"></p>
-      <p><img src="./images/03.jpg"></p>
-      </p>
-    </section>
-    <section id="smia">
-      Some text here.
-    </section>
-</div>
-</div>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
-      <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
-    <script src='js/scripts.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+      <section id="rockaways">
+        <h2>Storm flooding in NYC</h2>
+        <p><img src="./images/01.jpg"></p>
+        <p><img src="./images/02.jpg"></p>
+        <p><img src="./images/03.jpg"></p>
+        </p>
+      </section>
+      <section id="smias">
+        <h2>Significant Maritime and Industrial Areas (SMIAs)</h2>
+        <p>In order to help preserve the maritime industry and water dependent industry uses that still exist, the Plan also designates 6 areas as Significant Maritime Industrial Areas (SMIA).</p>
+          <p> These districts were previously zoned for heavy manufacturing and will continue to be used for industry. The designated SMIA’s include:</br>
+Kill Van Kull between Staten Island and Bayonne</br>
+Sunset Park in Brooklyn</br>
+Red Hook in Brooklyn</br>
+Brooklyn Navy Yard in Brooklyn</br>
+Newtown Creek in Brooklyn and Queens</br>
+South Bronx in the Bronx</br></p>
+      </section>
+    </div>
+  </div>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+  <script src='js/scripts.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
 
-  </body>
+</body>
+
 </html>

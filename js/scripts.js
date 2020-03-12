@@ -23,176 +23,183 @@ var map = new mapboxgl.Map(initOptions);
 map.on('style.load', function() {
 
 
-    // hurricane zone 1
-    map.addSource('hurricane1',
-    { type: 'geojson',
-      data: './data/hurricane1.geojson',
-      }
-      );
+  // hurricane zone 1
+  map.addSource('hurricane1', {
+    type: 'geojson',
+    data: './data/hurricane1.geojson',
+  });
 
-    map.addLayer({
+  map.addLayer({
     'id': 'hurricane1',
     'source': 'hurricane1',
     'type': 'fill',
     'paint': {
       'fill-color': '#d73027',
       'fill-opacity': 0.3,
-      }
-          });
+    }
+  });
 
-      // hurricane zone 2
-      map.addSource('hurricane2', {
-        type: 'geojson',
-        data: './data/hurricane2.geojson',
-      });
+  // hurricane zone 2
+  map.addSource('hurricane2', {
+    type: 'geojson',
+    data: './data/hurricane2.geojson',
+  });
 
-      map.addLayer({
-      'id': 'hurricane2',
-      'source': 'hurricane2',
-      'type': 'fill',
-      'paint': {
-        'fill-color': '#f46d43',
-        'fill-opacity': 0.3,
-        }
-      });
+  map.addLayer({
+    'id': 'hurricane2',
+    'source': 'hurricane2',
+    'type': 'fill',
+    'paint': {
+      'fill-color': '#f46d43',
+      'fill-opacity': 0.3,
+    }
+  });
 
-      // hurricane zone 3
-      map.addSource('hurricane3', {
-        type: 'geojson',
-        data: './data/hurricane3.geojson',
-      });
+  // hurricane zone 3
+  map.addSource('hurricane3', {
+    type: 'geojson',
+    data: './data/hurricane3.geojson',
+  });
 
-      map.addLayer({
-      'id': 'hurricane3',
-      'source': 'hurricane3',
-      'type': 'fill',
-      'paint': {
-        'fill-color': '#e0d653',
-        'fill-opacity': 0.3,
-        }
-      });
+  map.addLayer({
+    'id': 'hurricane3',
+    'source': 'hurricane3',
+    'type': 'fill',
+    'paint': {
+      'fill-color': '#e0d653',
+      'fill-opacity': 0.3,
+    }
+  });
 
-      // hurricane zone 4
-      map.addSource('hurricane4', {
-        type: 'geojson',
-        data: './data/hurricane4.geojson',
-      });
+  // hurricane zone 4
+  map.addSource('hurricane4', {
+    type: 'geojson',
+    data: './data/hurricane4.geojson',
+  });
 
-          map.addLayer({
-          'id': 'hurricane4',
-          'source': 'hurricane4',
-          'type': 'fill',
-          'paint': {
-            'fill-color': '#a9b352',
-            'fill-opacity': 0.3,
-            }
-          });
+  map.addLayer({
+    'id': 'hurricane4',
+    'source': 'hurricane4',
+    'type': 'fill',
+    'paint': {
+      'fill-color': '#a9b352',
+      'fill-opacity': 0.3,
+    }
+  });
 
-          // hurricane zone 5
-          map.addSource('hurricane5', {
-            type: 'geojson',
-            data: './data/hurricane5.geojson',
-          });
+  // hurricane zone 5
+  map.addSource('hurricane5', {
+    type: 'geojson',
+    data: './data/hurricane5.geojson',
+  });
 
-          map.addLayer({
-          'id': 'hurricane5',
-          'source': 'hurricane5',
-          'type': 'fill',
-          'paint': {
-            'fill-color': '#abdda4',
-            'fill-opacity': 0.3,
-            }
-          });
+  map.addLayer({
+    'id': 'hurricane5',
+    'source': 'hurricane5',
+    'type': 'fill',
+    'paint': {
+      'fill-color': '#abdda4',
+      'fill-opacity': 0.3,
+    }
+  });
 
-          // hurricane zone 6
-          map.addSource('hurricane6', {
-            type: 'geojson',
-            data: './data/hurricane6.geojson',
-          });
+  // hurricane zone 6
+  map.addSource('hurricane6', {
+    type: 'geojson',
+    data: './data/hurricane6.geojson',
+  });
 
-          map.addLayer({
-          'id': 'hurricane6',
-          'source': 'hurricane6',
-          'type': 'fill',
-          'paint': {
-            'fill-color': '#66c2a5',
-            'fill-opacity': 0.3,
-            }
-          });
+  map.addLayer({
+    'id': 'hurricane6',
+    'source': 'hurricane6',
+    'type': 'fill',
+    'paint': {
+      'fill-color': '#66c2a5',
+      'fill-opacity': 0.3,
+    }
+  });
 
-        // SMIA
-        map.addSource('smia', {
-          type: 'geojson',
-          data: './data/smia.geojson',
-        });
+  // SMIA
+  map.addSource('smia', {
+    type: 'geojson',
+    data: './data/smia.geojson',
+  });
 
-        map.addLayer({
-        'id': 'smia',
-        'source': 'smia',
-        'type': 'fill',
-        'layout': {'visibility': 'none'},
-        'paint': {
-          'fill-color': '#E066FF',
-          'fill-opacity': 0.5,
-          'fill-outline-color': 'black'
-          }
-        });
+  map.addLayer({
+    'id': 'smia',
+    'source': 'smia',
+    'type': 'fill',
+    'layout': {
+      'visibility': 'none'
+    },
+    'paint': {
+      'fill-color': '#E066FF',
+      'fill-opacity': 0.5,
+      'fill-outline-color': 'black'
+    }
+  });
 });
 
 map.addControl(
-new MapboxGeocoder({
-accessToken: mapboxgl.accessToken,
-mapboxgl: mapboxgl
-})
+  new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+  })
 );
 
 var chapters = {
-'intro': {
-  center: [-74.052005, 40.722214],
-  zoom: 10,
-  essential: true
-},
+  'intro': {
+    center: [-74.052005, 40.722214],
+    zoom: 10,
+    essential: true
+  },
 
-'rockaways': {
-  center: [-73.816615, 40.585236],
-  zoom: 11,
-  essential: true
-},
+  'rockaways': {
+    center: [-73.940220, 40.578368],
+    zoom: 11,
+    essential: true
+  },
 
+  'smias': {
+    center: [-74.052005, 40.722214],
+    zoom: 10,
+    essential: true,
+  }
 };
 
 
-
-console.log('hello')
 // On every scroll event, check which element is on screen
 window.onscroll = function() {
   console.log('scroll')
-var chapterNames = Object.keys(chapters);
-for (var i = 0; i < chapterNames.length; i++) {
-var chapterName = chapterNames[i];
-console.log(chapterName)
-if (isElementOnScreen(chapterName)) {
-setActiveChapter(chapterName);
-break;
-}
-}
+  var chapterNames = Object.keys(chapters);
+  for (var i = 0; i < chapterNames.length; i++) {
+    var chapterName = chapterNames[i];
+    console.log(chapterName)
+    if (isElementOnScreen(chapterName)) {
+      setActiveChapter(chapterName);
+      break;
+    }
+  }
 };
 
 var activeChapterName = 'intro';
+
 function setActiveChapter(chapterName) {
-if (chapterName === activeChapterName) return;
+  if (chapterName === activeChapterName) return;
+  map.flyTo(chapters[chapterName]);
 
-console.log('flying to ', chapters[chapterName])
-map.flyTo(chapters[chapterName]);
+  document.getElementById(chapterName).setAttribute('class', 'active');
+  document.getElementById(activeChapterName).setAttribute('class', '');
 
-document.getElementById(chapterName).setAttribute('class', 'active');
-document.getElementById(activeChapterName).setAttribute('class', '');
+  activeChapterName = chapterName;
 
-activeChapterName = chapterName;
-}
+  if (chapterName === 'smias') return;
+  map.setLayoutProperty('smia','visibility', 'visible');
 
-function isElementOnScreen(id) {
-var element = document.getElementById(id);
-var bounds = element.getBoundingClientRect();
-return bounds.top < window.innerHeight && bounds.bottom > 0;
-}
+  }
+
+  function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+  }
