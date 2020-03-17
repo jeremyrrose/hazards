@@ -1,3 +1,7 @@
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
 // this is my mapboxGL token
 // the base style includes data provided by mapbox, this links the requests to my account
 
@@ -30,12 +34,13 @@ map.on('style.load', function() {
   });
 
   map.addLayer({
-    'id': 'hurricane1',
+    'id': 'Zone 1',
     'source': 'hurricane1',
     'type': 'fill',
     'paint': {
       'fill-color': '#d73027',
       'fill-opacity': 0.3,
+
     }
   });
 
@@ -46,7 +51,7 @@ map.on('style.load', function() {
   });
 
   map.addLayer({
-    'id': 'hurricane2',
+    'id': 'Zone 2',
     'source': 'hurricane2',
     'type': 'fill',
     'paint': {
@@ -62,7 +67,7 @@ map.on('style.load', function() {
   });
 
   map.addLayer({
-    'id': 'hurricane3',
+    'id': 'Zone 3',
     'source': 'hurricane3',
     'type': 'fill',
     'paint': {
@@ -78,7 +83,7 @@ map.on('style.load', function() {
   });
 
   map.addLayer({
-    'id': 'hurricane4',
+    'id': 'Zone 4',
     'source': 'hurricane4',
     'type': 'fill',
     'paint': {
@@ -94,7 +99,7 @@ map.on('style.load', function() {
   });
 
   map.addLayer({
-    'id': 'hurricane5',
+    'id': 'Zone 5',
     'source': 'hurricane5',
     'type': 'fill',
     'paint': {
@@ -110,7 +115,7 @@ map.on('style.load', function() {
   });
 
   map.addLayer({
-    'id': 'hurricane6',
+    'id': 'Zone 6',
     'source': 'hurricane6',
     'type': 'fill',
     'paint': {
@@ -140,15 +145,15 @@ map.on('style.load', function() {
   });
 });
 
-map.addControl(
-  new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    mapboxgl: mapboxgl
-  })
-);
 
 var chapters = {
   'intro': {
+    center: [-74.052005, 40.722214],
+    zoom: 10,
+    essential: true
+  },
+
+  'hurricanez': {
     center: [-74.052005, 40.722214],
     zoom: 10,
     essential: true
@@ -193,13 +198,46 @@ function setActiveChapter(chapterName) {
 
   activeChapterName = chapterName;
 
-  if (chapterName === 'smias') return;
+  if (activeChapterName === 'smias')
   map.setLayoutProperty('smia','visibility', 'visible');
+  else map.setLayoutProperty('smia','visibility', 'none');
 
-  }
+}
 
   function isElementOnScreen(id) {
     var element = document.getElementById(id);
     var bounds = element.getBoundingClientRect();
     return bounds.top < window.innerHeight && bounds.bottom > 0;
+  }
+
+  // Zone toggles
+  var toggleableLayerIds = ['Zone 1', 'Zone 2', 'Zone 3', 'Zone 4', 'Zone 5', 'Zone 6'];
+
+  for (var i = 0; i < toggleableLayerIds.length; i++) {
+  var id = toggleableLayerIds[i];
+
+  var link = document.createElement('a');
+  link.href = '#';
+  link.className = 'active';
+  link.textContent = id;
+
+
+  link.onclick = function(e) {
+  var clickedLayer = this.textContent;
+  e.preventDefault();
+  e.stopPropagation();
+
+  var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+  if (visibility === 'visible') {
+  map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+  this.className = '';
+  } else {
+  this.className = 'active';
+  map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+  }
+  };
+
+  var layers = document.getElementById('menu');
+  layers.appendChild(link);
   }
