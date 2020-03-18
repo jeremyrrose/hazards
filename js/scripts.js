@@ -149,6 +149,26 @@ map.on('style.load', function() {
       'fill-outline-color': 'black'
     }
   });
+
+  // Newtown
+  map.addSource('newtown', {
+    type: 'geojson',
+    data: './data/smia.geojson',
+  });
+
+  map.addLayer({
+    'id': 'newtown',
+    'source': 'newtown',
+    'type': 'fill',
+    'layout': {
+      'visibility': 'none'
+    },
+    'paint': {
+      'fill-color': '#E066FF',
+      'fill-opacity': 0.5,
+      'fill-outline-color': 'black'
+    }
+  });
 });
 
 
@@ -204,9 +224,13 @@ function setActiveChapter(chapterName) {
 
   activeChapterName = chapterName;
 
-  if (activeChapterName === 'smias', 'newtown')
+  if (activeChapterName === 'smias')
   map.setLayoutProperty('smia','visibility', 'visible');
   else map.setLayoutProperty('smia','visibility', 'none');
+
+  if (activeChapterName === 'newtown')
+  map.setLayoutProperty('newtown','visibility', 'visible');
+  else map.setLayoutProperty('newtown','visibility', 'none');
 
 }
 
