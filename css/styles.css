@@ -30,7 +30,7 @@ a:hover {
   left: 0;
   overflow-x: hidden;
   transition: 0.5s;
-  background-image: url("/images/main.jpg");
+  background-image: url("https://raw.githubusercontent.com/cneidson/hazards/master/images/main.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top left;
