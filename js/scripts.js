@@ -1,3 +1,9 @@
+//intro overlay
+
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
@@ -148,12 +154,6 @@ map.on('style.load', function() {
 
 var chapters = {
   'intro': {
-    center: [-74.052005, 40.722214],
-    zoom: 10,
-    essential: true
-  },
-
-  'hurricanez': {
     center: [-74.052005, 40.722214],
     zoom: 10,
     essential: true

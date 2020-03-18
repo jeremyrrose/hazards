@@ -7,76 +7,73 @@
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
   <link href='css/styles.css' rel='stylesheet' />
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter|Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/dc4d523656.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
+  <body onload="openNav()">
   <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-water"></i></a>
   <div class="overlay-content">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <h1>Storm Risk and Environmental Hazards in NYC</h1>
+    <p>New York City is vulnerable to coastal storms, including nor'easters,
+      tropical storms and hurricanes. </p>
+      <p>Residents living in floodprone areas face
+      risks not only from coastal storms themselves, but also from long-term
+      environmental and public health hazards associated with flooding in these
+      areas. Much of this is linked to the long history of
+      manufacturing and industrial enterprises in New York.</p>
+      <p><i class="fas fa-info-circle"></i> <b>Click <i class="fas fa-water"></i> to launch the map. </p>
+      <p><div class="credit"><i>Image shows aerial views from Hurricane Sandy storm
+        surge damage, Oct. 30, 2012. (WikiCommons)</i></div></p>
   </div>
 </div>
   <div id="map"><nav id="menu"></nav></div>
   <div id="container">
-    <div id="features">
-      <section id="intro" class="active">
-        <h1>Storm Risk and Environmental Hazards in NYC</h1>
-        <p>
-          New York City is vulnerable to coastal storms, including nor'easters,
-          tropical storms and hurricanes. Residents living in floodprone areas face
-          risks not only from coastal storms themselves, but also from long-term
-          environmental and public health hazards associated with flooding in these
-          areas. Much of this is linked to the long history of
-          manufacturing and industrial enterprises in New York.</p>
-          <p>These risks will be explored in this map.</p>
-      </section>
-      <section id="hurricanez">
-        <h2>What are evacuation zones?</h2>
-        <p>As part of its diaster managment planning, New York City has
-          designated six hurricane evacuation zones to identify areas likely to
-          be inundated by storm surge. In the event of a hurricane or tropical
-          storm, residents in the hurricane zones may be ordered to evacuate.</p>
-        <p>There are six levels of evacuation zones. <b>Zone 1</b>
-           has the highest risk and is the most likely to flood.</p>
-        <p>These zones were unveiled by the city in 2013 to expand on older hurricane evacuation zones and help the
-          city better communicate with affected communities. The revised zones drew in
-          <a href="https://gothamist.com/news/map-nyc-has-new-hurricane-evacuation-zones" target="_blank">an additional 600,000 New Yorkers</a>
-          not included within the boundaries of the former zones.</p>
-          <p><i class="fas fa-info-circle"></i><i><small> Use the buttons on the right side of the map to explore the evacuation zones.</small></i></p>
-      </section>
-      <section id="rockaways">
-        <h2>What is the impact of storm flooding?</h2>
-        <p>For many New Yokers, the city's storm vulnerability was made very
-          apparent when Hurricane Sandy hit the city on October 29, 2012. The
-          storm resulted in 44 deaths, and an estimated <a
-          href="https://www1.nyc.gov/site/cdbgdr/about/About%20Hurricane%20Sandy.page" target="_blank">$19
-          billion in damages and economic loses</a>.
-          More than 69,000 residential unit were damaged, and thousands of residents were temporarily displaced.</p>
-        <p>One of the communities that was hardest hit.</p>
-        <p><img src="./images/01.jpg"></p>
-        <p><img src="./images/02.jpg"></p>
-        <p><img src="./images/03.jpg"></p>
-      </section>
-      <section id="smias">
-        <h2>Significant Maritime and Industrial Areas (SMIAs)</h2>
-        <p>In order to help preserve the maritime industry and water dependent industry uses that still exist, the Plan also designates 6 areas as Significant Maritime Industrial Areas (SMIA).</p>
-        <p> These districts were previously zoned for heavy manufacturing and will continue to be used for industry. The designated SMIA’s include:</br>
-          Kill Van Kull between Staten Island and Bayonne</br>
-          Sunset Park in Brooklyn</br>
-          Red Hook in Brooklyn</br>
-          Brooklyn Navy Yard in Brooklyn</br>
-          Newtown Creek in Brooklyn and Queens</br>
-          South Bronx in the Bronx</br></p>
-          <BR><BR>
-      </section>
+      <div id="features">
+        <section id="intro" class="active">
+          <h2>What are evacuation zones?</h2>
+          <p>As part of its diaster managment planning, New York City has
+            designated six hurricane evacuation zones to identify areas likely to
+            be inundated by storm surge. In the event of a hurricane or tropical
+            storm, residents in the hurricane zones may be ordered to evacuate.</p>
+          <p>There are six levels of evacuation zones. <b>Zone 1</b>
+             has the highest risk and is the most likely to flood.</p>
+          <p>These zones were unveiled by the city in 2013 to expand on older hurricane evacuation zones and help the
+            city better communicate with affected communities. The revised zones drew in
+            <a href="https://gothamist.com/news/map-nyc-has-new-hurricane-evacuation-zones" target="_blank">an additional 600,000 New Yorkers</a>
+            not included within the boundaries of the former zones.</p>
+            <p><i class="fas fa-info-circle"></i><i><small> Use the buttons on the right side of the map to explore the evacuation zones.</small></i></p>
+        </section>
+        <section id="rockaways">
+          <h2>What is the impact of storm flooding?</h2>
+          <p>For many New Yokers, the city's storm vulnerability was made very
+            apparent when Hurricane Sandy hit on October 29, 2012. The
+            storm resulted in 44 deaths, and an estimated <a
+            href="https://www1.nyc.gov/site/cdbgdr/about/About%20Hurricane%20Sandy.page" target="_blank">$19
+            billion in damages and economic loses</a>.
+            More than 69,000 residential unit were damaged, and thousands of residents were temporarily displaced.</p>
+          <p>One of the communities that was hardest hit.</p>
+          <p><img src="./images/01.jpg"></p>
+          <p><img src="./images/02.jpg"></p>
+          <p><img src="./images/03.jpg"></p>
+        </section>
+        <section id="smias">
+          <h2>Significant Maritime and Industrial Areas (SMIAs)</h2>
+          <p>In order to help preserve the maritime industry and water dependent industry uses that still exist, the Plan also designates 6 areas as Significant Maritime Industrial Areas (SMIA).</p>
+          <p> These districts were previously zoned for heavy manufacturing and will continue to be used for industry. The designated SMIA’s include:</br>
+            Kill Van Kull between Staten Island and Bayonne</br>
+            Sunset Park in Brooklyn</br>
+            Red Hook in Brooklyn</br>
+            Brooklyn Navy Yard in Brooklyn</br>
+            Newtown Creek in Brooklyn and Queens</br>
+            South Bronx in the Bronx</br></p>
+            <BR><BR>
+        </section>
+      </div>
     </div>
-  </div>
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>

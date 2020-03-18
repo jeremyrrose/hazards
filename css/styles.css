@@ -1,18 +1,17 @@
 /* Page setup */
-
 body {
   margin: 0;
   padding: 0;
-  color:#f8f9fa;
+  color: #f8f9fa;
 }
 
 a:link {
-  color: #b3b279;
+  color: #cbab9f;
   text-decoration: none;
 }
 
 a:visited {
-  color: #b3b279;
+  color: #cbab9f;
   text-decoration: none;
 }
 
@@ -29,18 +28,31 @@ a:hover {
   z-index: 500;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
+  background-image: url("/images/main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.credit {
+  font-size: .8vw;
 }
 
 .overlay-content {
   position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
+  width: 40%;
+  top: 30px;
+  left: 20px;
+  text-align: left;
+  margin-left: 30px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #d5d5d5;
+  font-size: 1.1vw;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8vw;
 }
 
 .overlay a {
@@ -49,7 +61,7 @@ a:hover {
   font-size: 36px;
   color: #818181;
   display: block;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -64,11 +76,14 @@ a:hover {
 }
 
 @media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
+  .overlay a {
+    font-size: 20px
+  }
+
   .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
 
@@ -93,16 +108,16 @@ a:hover {
 }
 
 #features {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(18, 18, 18, 0.85);
   position: absolute;
-  color: #f8f9fa;
+  color: #d5d5d5;
   width: 40%;
   top: 30px;
   left: 20px;
+  padding:20px;
   box-sizing: border-box;
-  text-shadow: 2px 1px #000000;
   font-size: 1.1vw;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.8vw;
   z-index: 3;
 }
@@ -110,13 +125,13 @@ a:hover {
 h1 {
   font-size: 3.9vw;
   line-height: 4.1vw;
-  font-family: 'Roboto Bold', sans-serif;
+  font-family: 'Inter Bold', sans-serif;
 }
 
 h2 {
   font-size: 2.1vw;
   line-height: 2.2vw;
-  font-family: 'Roboto Bold', sans-serif;
+  font-family: 'Inter Bold', sans-serif;
 }
 
 img {
@@ -141,43 +156,43 @@ section:last-child {
 
 /* Zone toggles */
 #menu {
-background: #000000;
-position: absolute;
-z-index: 1;
-top: 10px;
-right: 10px;
-border-radius: 3px;
-width: 70px;
-border: 1px solid rgba(0, 0, 0, 0.4);
-font-family: 'Open Sans', sans-serif;
+  background: #000000;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  border-radius: 3px;
+  width: 70px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-family: 'Open Sans', sans-serif;
 }
 
 #menu a {
-font-size: 12px;
-color: #000000;
-display: block;
-margin: 0;
-padding: 0;
-padding: 8px;
-text-decoration: none;
-border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-text-align: center;
+  font-size: 12px;
+  color: #000000;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  text-align: center;
 }
 
 #menu a:last-child {
-border: none;
+  border: none;
 }
 
 #menu a:hover {
-background-color: #4d4544;
-color: #ffffff;
+  background-color: #4d4544;
+  color: #ffffff;
 }
 
 #menu a.active {
-background-color: #1f2020;
-color: #ffffff;
+  background-color: #1f2020;
+  color: #ffffff;
 }
 
 #menu a.active:hover {
-background: #000000;
+  background: #000000;
 }
