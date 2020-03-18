@@ -1,11 +1,11 @@
 //intro overlay
 
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+function openIntro() {
+  document.getElementById("myIntro").style.width = "100%";
 }
 
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+function closeIntro() {
+  document.getElementById("myIntro").style.width = "0%";
 }
 
 // this is my mapboxGL token
@@ -169,7 +169,13 @@ var chapters = {
     center: [-74.052005, 40.722214],
     zoom: 10,
     essential: true,
-  }
+  },
+
+  'newtown': {
+      center: [-73.951632, 40.726445],
+      zoom: 13,
+      essential: true,
+    }
 };
 
 
@@ -198,7 +204,7 @@ function setActiveChapter(chapterName) {
 
   activeChapterName = chapterName;
 
-  if (activeChapterName === 'smias')
+  if (activeChapterName === 'smias', 'newtown')
   map.setLayoutProperty('smia','visibility', 'visible');
   else map.setLayoutProperty('smia','visibility', 'none');
 

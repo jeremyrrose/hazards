@@ -13,74 +13,102 @@
 </head>
 
 <body>
-  <body onload="openNav()">
-  <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-water"></i></a>
-  <div class="overlay-content">
-    <h1>Storm Risk and Environmental Hazards in NYC</h1>
-    <p>New York City is vulnerable to coastal storms, including nor'easters,
-      tropical storms and hurricanes. </p>
-      <p>Residents living in floodprone areas face
-      risks not only from coastal storms themselves, but also from long-term
-      environmental and public health hazards associated with flooding in these
-      areas. Much of this is linked to the long history of
-      manufacturing and industrial enterprises in New York.</p>
-      <p><i class="fas fa-info-circle"></i> <b>Click <i class="fas fa-water"></i> to launch the map. </p>
-      <p><div class="credit"><i>Image shows aerial views from Hurricane Sandy storm
-        surge damage, Oct. 30, 2012. (WikiCommons)</i></div></p>
-  </div>
-</div>
-  <div id="map"><nav id="menu"></nav></div>
-  <div id="container">
+
+  <body onload="openIntro()">
+    <div id="myIntro" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeIntro()"><i class="fas fa-water"></i></a>
+      <div class="overlay-content">
+        <h1>Storm Risk and Environmental Hazards in NYC</h1>
+        <p>New York City is vulnerable to coastal storms, including nor'easters,
+          tropical storms and hurricanes. </p>
+        <p>Residents living in floodprone areas face
+          risks not only from coastal storms themselves, but also from long-term
+          environmental and public health hazards associated with flooding in these
+          areas. Much of this is linked to the long history of
+          manufacturing and industrial enterprises in New York.</p>
+        <p><i class="fas fa-info-circle"></i> <b>Click <i class="fas fa-water"></i> to launch the map. </p>
+        <p>
+          <div class="credit"><i>This website was created for the graduate course "Interactive Web Mapping and Spatial Data Visualization" at NYU Wagner. Image shows aerial views from Hurricane Sandy storm
+              surge damage, Oct. 30, 2012. (WikiCommons)</i></div>
+        </p>
+      </div>
+    </div>
+    <div id="map">
+      <nav id="menu"></nav>
+    </div>
+    <div id="container">
       <div id="features">
         <section id="intro" class="active">
-          <h2>What are evacuation zones?</h2>
+          <h2>Areas of increased flood and storm risk</h2>
           <p>As part of its diaster managment planning, New York City has
             designated six hurricane evacuation zones to identify areas likely to
             be inundated by storm surge. In the event of a hurricane or tropical
             storm, residents in the hurricane zones may be ordered to evacuate.</p>
           <p>There are six levels of evacuation zones. <b>Zone 1</b>
-             has the highest risk and is the most likely to flood.</p>
+            has the highest risk and is the most likely to flood.</p>
           <p>These zones were unveiled by the city in 2013 to expand on older hurricane evacuation zones and help the
             city better communicate with affected communities. The revised zones drew in
             <a href="https://gothamist.com/news/map-nyc-has-new-hurricane-evacuation-zones" target="_blank">an additional 600,000 New Yorkers</a>
             not included within the boundaries of the former zones.</p>
-            <p><i class="fas fa-info-circle"></i><i><small> Use the buttons on the right side of the map to explore the evacuation zones.</small></i></p>
+          <p><i class="fas fa-info-circle"></i><i><small> Use the buttons on the right side of the map to explore the evacuation zones.</small></i></p>
         </section>
         <section id="rockaways">
-          <h2>What is the impact of storm flooding?</h2>
+          <h2>Storms and economic inequality</h2>
           <p>For many New Yokers, the city's storm vulnerability was made very
             apparent when Hurricane Sandy hit on October 29, 2012. The
-            storm resulted in 44 deaths, and an estimated <a
-            href="https://www1.nyc.gov/site/cdbgdr/about/About%20Hurricane%20Sandy.page" target="_blank">$19
-            billion in damages and economic loses</a>.
-            More than 69,000 residential unit were damaged, and thousands of residents were temporarily displaced.</p>
-          <p>One of the communities that was hardest hit.</p>
+            storm resulted in 44 deaths, and an estimated <a href="https://www1.nyc.gov/site/cdbgdr/about/About%20Hurricane%20Sandy.page" target="_blank">$19
+              billion in damages and economic loses</a>.
+            More than 69,000 residential units were damaged, and thousands of residents were temporarily displaced.</p>
+          <p>One of the communities that was hardest hit was the Rockaways, the community that sits on a barrier
+            beach off the southeast end of Queens. Even before Sandy, the area suffered from deep income inequalities.
+            <a href="https://prospect.org/infrastructure/hurricane-sandy-inequalities-resilience-new-york/" target="_blank">A quarter
+              of the Far Rockaway population</a> (and one-third of all children on the peninsula) live below
+            the federal poverty level. Re-development of the area post-Sandy has led to further economic disparities.</p>
           <p><img src="./images/01.jpg"></p>
           <p><img src="./images/02.jpg"></p>
           <p><img src="./images/03.jpg"></p>
+          <p>
+            <div class="credit"><i>(Image credits Inside Climate News, WBUR, Curbed New York)</i></div>
+          </p>
         </section>
         <section id="smias">
-          <h2>Significant Maritime and Industrial Areas (SMIAs)</h2>
-          <p>In order to help preserve the maritime industry and water dependent industry uses that still exist, the Plan also designates 6 areas as Significant Maritime Industrial Areas (SMIA).</p>
-          <p> These districts were previously zoned for heavy manufacturing and will continue to be used for industry. The designated SMIA’s include:</br>
-            Kill Van Kull between Staten Island and Bayonne</br>
-            Sunset Park in Brooklyn</br>
-            Red Hook in Brooklyn</br>
-            Brooklyn Navy Yard in Brooklyn</br>
-            Newtown Creek in Brooklyn and Queens</br>
-            South Bronx in the Bronx</br></p>
-            <BR><BR>
+          <h2>Flooding and industrial hazards</h2>
+          <p>New York City is also home to six designated <b>Significant Maritime and Industrial Areas (SMIAs).</B>
+            These areas are given special area designation status by NYC Planning due to their heightened vulnerability
+            as industrial areas and working waterfronts.
+            SMIAs are used for industry.</p>
+            <p>Each of the six SMIAs (South Bronx, Newtown Creek, Brooklyn Navy Yard, Red Hook Container Terminal,
+            Sunset Park/Erie Basin, Kill Van Kull, and Staten Island West Shore)
+            use, store or transport <a href="https://www.epa.gov/sites/production/files/2016-08/documents/communityresilienceinejindustrialwaterfrontcommunities.pdf" target="_blank">hazardous
+              or toxic substances</a> at higher concentrations. All six SMIAs are also  within the hurricane evacuation zones, suggesting
+            they are vulnerable to flooding and storm surge, which can result in accidential or uncontrolled release of these substances,
+            leading to significant envionrmental pollution and public health hazards.</p>
+          <p>We'll explore unique vulnerabilities in each of the SMIAs, based on research from <a href="https://nycejalliance.tumblr.com/post/132225273641/the-six-significant-maritime-and-industrial-areas" target="_blank">New York City Environmental Justice Alliance</a>.</p>
+          <p><img src="./images/newtown.jpg"></p>
+        </section>
+        <section id="newtown">
+          <h2>Newtown Creek SMIA</h2>
+          <p>Newtown Creek is known for the Greenpoint Oil Spill, one of the largest oil spills ever recorded in the United States.
+            More than 17 million gallons of petroleum (more than twice the amount of crude oil that spilled from the Exxon Valdez)
+            were leaked into the soil over the course of several decades.</p>
+            <p><img src="./images/oilspill.jpg"></p>
+            <p><div class="credit">(Image courtesy Newtown Creek Alliance)</div></p>
+      <P>Today, the entirty of Newtown Creek is a federal superfund site. According to the U.S. Environmental Protection Agency, soil in the Newtown Creek area still contains metals, volatile organic
+        compounds, and semi-volatile organic compounds (including polycyclic aromatic hydrocarbons and polychlorinated biphenyls)
+         concentrations above levels in nearby locations in the Atlantic Basin. Additionally, businesses located in the SMIA use
+         industrial solvents containing trichloroethylene, a known carcogien.</p>
+          <p><img src="./images/newtown-creek.jpg"></p>
+          <p><img src="./images/newtown-creek2.jpg"></p>
         </section>
       </div>
     </div>
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
-  <script src='js/scripts.js'></script>
-  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+    <script src='js/scripts.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
 
-</body>
+  </body>
 
 </html>
