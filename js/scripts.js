@@ -2,10 +2,12 @@
 
 function openIntro() {
   document.getElementById("myIntro").style.width = "100%";
+  document.querySelector('body').style.overflow = 'hidden';
 }
 
 function closeIntro() {
   document.getElementById("myIntro").style.width = "0%";
+  document.querySelector('body').style.overflow = 'auto';
 }
 
 // this is my mapboxGL token
